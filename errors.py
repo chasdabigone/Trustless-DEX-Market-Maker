@@ -1,8 +1,4 @@
-################################################################
-# Errors from Kolibri contracts.
-#
-#  IMPORTANT: Keep this file in sync with /sdk/src/contract-errors.py.
-################################################################
+
 
 # The sender of a contract invocation was required to be the Governor contract.
 NOT_GOVERNOR = 1
