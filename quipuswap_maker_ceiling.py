@@ -1,8 +1,8 @@
 import smartpy as sp
 
-Addresses = sp.io.import_stored_contract("addresses.py")
-Constants = sp.io.import_stored_contract("constants.py")
-Errors = sp.io.import_stored_contract("errors.py")
+Addresses = sp.io.import_script_from_url("file:addresses.py")
+Constants = sp.io.import_script_from_url("file:constants.py")
+Errors = sp.io.import_script_from_url("file:errors.py")
 
 ################################################################
 # Contract
