@@ -6,7 +6,7 @@ import smartpy as sp
 GOVERNOR_ADDRESS = sp.address("tz1YYnf7vGXqCmB1shNg4rHiTz5gwWTDYceB")
 
 # The address that acts as the token contract.
-TOKEN_ADDRESS = sp.address("KT1K9gCRgaLRFKTErYt1wVxA3Frb9FjasjTV")
+TOKEN_ADDRESS = sp.address("KT1GG8Zd5rUp1XV8nMPRBY2tSyVn6NR5F4Q1")
 
 # The address which acts as the Oracle.
 ORACLE_ADDRESS = sp.address("tz1P2Po7YM526ughEsRbY4oR9zaUPDZjxFrb")
