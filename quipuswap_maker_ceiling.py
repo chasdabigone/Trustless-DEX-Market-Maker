@@ -130,8 +130,8 @@ class MakerContract(sp.Contract):
     sp.verify(dataAge <= self.data.maxDataDelaySec, Errors.STALE_DATA)
   
     # Upsample price numbers to have tokenPrecision digits of precision
-    harbingerVwapPrice = (sp.snd(harbingerVwap) * self.data.tokenPrecision)
-    harbingerSpotPrice = (sp.fst(sp.snd(sp.snd(sp.snd(sp.snd(sp.snd(harbingerSpot)))))) * self.data.tokenPrecision)
+    harbingerVwapPrice = (sp.snd(harbingerVwap) * self.data.tokenPrecision) // 1000000
+    harbingerSpotPrice = (sp.fst(sp.snd(sp.snd(sp.snd(sp.snd(sp.snd(harbingerSpot)))))) * self.data.tokenPrecision) // 1000000
 
     # Check for volatility difference between VWAP and spot
     volatilityDifference = (abs(harbingerVwapPrice - harbingerSpotPrice) // harbingerSpotPrice) * 100 # because tolerance is a percent
