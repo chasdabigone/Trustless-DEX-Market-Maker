@@ -137,8 +137,6 @@ class MakerContract(sp.Contract):
 	volatilityDifference = (abs(harbingerVwapPrice - harbingerSpotPrice) // harbingerSpotPrice) * 100 # because tolerance is a percent
 	sp.verify(self.data.volatilityTolerance > volatilityDifference, Errors.VOLATILITY)
 
-	# TODO Check for price difference between Ubinetic/Kaiko/Harbinger oracles
-
 	# Upsample
 	tokensToTrade = (self.data.tradeAmount * self.data.tokenPrecision)
 
